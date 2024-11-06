@@ -24,8 +24,13 @@ Python 3.11.5
 版本mysql8.2.0
 我是用docker启动，参考docker.png
 
+7. 新建数据库
+database name:performance_schema
+character set:utf8mb4
+collation:utf8mb4_general_ci
+初始化脚本：执行mysql-table.sql
 
-7. redis
+9. redis
 可在docker中安装最新版
 
 # 项目启动
