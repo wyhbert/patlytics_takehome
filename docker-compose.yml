@@ -1,0 +1,32 @@
+version: '3'
+services:
+  flask-app:
+    build:
+      context: ./patents-service # Flask 项目的路径
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    networks:
+      - app-network
+
+  # spring-boot-app:
+  #   build:
+  #     context: ./patlytics-web # Spring Boot 项目的路径
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - app-network
+
+  # vue-app:
+  #   build:
+  #     context: ./patlytics-web/ruoyi-ui # Vue 项目的路径
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "1024:1024"
+  #   networks:
+  #     - app-network
+
+networks:
+  app-network:
+    driver: bridge
